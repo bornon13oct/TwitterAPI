@@ -34,7 +34,6 @@ app.post("/", function(req, res){
               var info   = { followers : followers, stats : stats, latest : latest };
               res.render("result", {info : info});
             });
-            
       }
     });
 });
