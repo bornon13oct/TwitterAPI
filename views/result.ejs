@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+    <table style="width:60%">
+        <tr>
+            <td class="thead">
+                <h3>Followers</h3>
+            </td>
+            <td class="tdata">
+                <%= info.followers %>
+            </td>
+        </tr>
+        <tr>
+            <td class="thead">
+                <h3>Tweet Count</h3>
+            </td>
+            <td class="tdata">
+                 <%= info.stats %>
+            </td>
+        </tr>
+        <tr>
+            <td class="thead">
+                <h3>Latest Tweet</h3>
+            </td>
+            <td class="tdata">
+                <i style="font-weight:300;"><%= info.latest %></i>
+            </td>
+        </tr>
+    </table>
+
+<% include partials/footer %>

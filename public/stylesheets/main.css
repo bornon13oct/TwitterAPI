@@ -1,0 +1,38 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+.thead {
+    width: 250px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+.tdata {
+    padding: 50px;
+}
+.fix button{
+    height: 40px;
+    font-size: 15px;
+    border: 4px solid #45709B;
+    background: #6095CB;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.contain{
+    border: 1px solid lightgray;
+    width: 40%;
+    height: 60%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: 0px 0px 3px lightgray;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
