@@ -22,7 +22,6 @@ app.post("/", function(req, res){
     var handle = req.body.handle;
     if(handle.charAt(0)=='@')
         handle = handle.substring(1);
-    console.log(handle);
     var params = {screen_name: handle};
     twit.get('users/lookup', params, function(error, users, response) {
       if (!error) {
@@ -34,6 +33,7 @@ app.post("/", function(req, res){
               var info   = { followers : followers, stats : stats, latest : latest };
               res.render("result", {info : info});
             });
+            
       }
     });
 });
