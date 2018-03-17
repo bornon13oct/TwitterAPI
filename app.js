@@ -29,11 +29,16 @@ app.post("/", function(req, res){
             stats     = users[0].statuses_count;
             var latestTweets = require('latest-tweets')
             latestTweets(handle, function (err, tweets) {
-              var latest = tweets[0].content;
+              if(tweets.length>0)
+                var latest = tweets[0].content;
+              else
+                var latest = "";
               var info   = { followers : followers, stats : stats, latest : latest };
               res.render("result", {info : info});
             });
             
+      } else {
+          res.render("invalid");
       }
     });
 });
