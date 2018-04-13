@@ -8,10 +8,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 var twit = new Twitter({
-  consumer_key: '8WupYFgGq1sjztH6AN2jQdYDb',
-  consumer_secret: 'f5MPa3lGFenoacyTGmPByH1zSpaV8kFilT69TFhwHVEwGNeskt',
-  access_token_key: '753772479600955392-sWugKE5NZrUzg0SHShOytIzALXRozdK',
-  access_token_secret: 'Gx5yhbZnDt2jUYVca8LvdcRPa0hCiuXNS6kcD7Ugue7Q9'
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 app.get("/", function(req, res){
